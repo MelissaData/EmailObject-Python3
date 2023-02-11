@@ -1,5 +1,5 @@
-# Name:    MelissaDataEmailObjectWindowsPython3
-# Purpose: Use the Melissa Updater to make the MelissaDataEmailObjectWindowsPython3 sample usable
+# Name:    MelissaEmailObjectWindowsPython3
+# Purpose: Use the Melissa Updater to make the MelissaEmailObjectWindowsPython3 code usable
 
 
 ######################### Parameters ##########################
@@ -26,7 +26,7 @@ $ProductName = "DQ_EMAIL_DATA"
 # Modify this if you want to use 
 $CurrentPath = $PSScriptRoot
 Set-Location $CurrentPath
-$ProjectPath = "$CurrentPath\MelissaDataEmailObjectWindowsPython3Sample"
+$ProjectPath = "$CurrentPath\MelissaEmailObjectWindowsPython3"
 $DataPath = "$ProjectPath\Data"
 
 If (!(Test-Path $DataPath)) {
@@ -111,7 +111,7 @@ function CheckDLLs() {
 
 ########################## Main ############################
 
-Write-Host "`n================= Sample of Melissa Data Email Object =================`n                    [ Python3 | Windows | 64BIT ]`n"
+Write-Host "`n========================= Melissa Email Object ========================`n                    [ Python3 | Windows | 64BIT ]`n"
 
 # Get license (either from parameters or user input)
 if ([string]::IsNullOrEmpty($license) ) {
@@ -147,14 +147,11 @@ if (!$DLLsAreDownloaded) {
 
 Write-Host "All file(s) have been downloaded/updated! "
 
-# Start sample
-# Build project
-Write-Host "`n============================ BUILD PROJECT ============================"
-
+# Start
 # Run project
 if ([string]::IsNullOrEmpty($email)) {
-  python3 MelissaDataEmailObjectWindowsPython3Sample/MelissaDataEmailObjectWindowsPython3Sample.py --license $License  --dataPath $DataPath
+  python3 MelissaEmailObjectWindowsPython3/MelissaEmailObjectWindowsPython3.py --license $License  --dataPath $DataPath
 }
 else {
-  python3 MelissaDataEmailObjectWindowsPython3Sample/MelissaDataEmailObjectWindowsPython3Sample.py --license $License  --dataPath $DataPath --email $email
+  python3 MelissaEmailObjectWindowsPython3/MelissaEmailObjectWindowsPython3.py --license $License  --dataPath $DataPath --email $email
 }
