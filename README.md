@@ -24,7 +24,7 @@ And return
 
 - Windows 64-bit Python 3.8.7
 - Powershell 5.1
-- Melissa data files for 2023-01
+- Melissa data files for 2023-02
 
 ## Required File(s) and Programs
 
