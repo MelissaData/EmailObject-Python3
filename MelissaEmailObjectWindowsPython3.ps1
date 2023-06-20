@@ -150,8 +150,12 @@ Write-Host "All file(s) have been downloaded/updated! "
 # Start
 # Run project
 if ([string]::IsNullOrEmpty($email)) {
+  Push-Location MelissaEmailObjectWindowsPython3
   python3 MelissaEmailObjectWindowsPython3/MelissaEmailObjectWindowsPython3.py --license $License  --dataPath $DataPath
+  Pop-Location
 }
 else {
-  python3 MelissaEmailObjectWindowsPython3/MelissaEmailObjectWindowsPython3.py --license $License  --dataPath $DataPath --email $email
+  Push-Location MelissaEmailObjectWindowsPython3
+  python3 MelissaEmailObjectWindowsPython3.py --license $License  --dataPath $DataPath --email $email
+  Pop-Location
 }

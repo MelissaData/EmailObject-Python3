@@ -2,15 +2,14 @@ from ctypes import *
 from enum import Enum
 import ctypes
 import os
+import sys
 
-dir = os.getcwd()
-
-
-if (os.name == 'nt'):
-  lib = ctypes.CDLL(f'{dir}/MelissaEmailObjectWindowsPython3/mdEmail.dll')
+if (os.name == 'nt' and sys.version_info[:2] >= (3,8)):
+  lib = ctypes.CDLL('mdEmail.dll', winmode=0)
+elif (os.name == 'nt'):
+  lib = ctypes.CDLL('mdEmail.dll')
 else:
-  lib = ctypes.CDLL(f'{dir}/MelissaEmailObjectLinuxPython3/libmdPhone.so')
-
+  lib = ctypes.CDLL('libmdEmail.so')
 
 lib.mdEmailCreate.argtypes = []
 lib.mdEmailCreate.restype = c_void_p
