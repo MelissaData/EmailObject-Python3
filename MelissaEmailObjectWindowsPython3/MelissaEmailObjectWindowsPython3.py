@@ -101,21 +101,21 @@ def run_as_console(license, test_email, data_path):
 
         """ Print user input """
         print("\n================================ INPUTS ===============================\n")
-        print(f"\t               Email: {email}")
+        print(f"\t                Email: {email}")
 
         """ Execute Email Object """
         data_container = email_object.execute_object_and_result_codes(data)
 
         """ Print output """
         print("\n================================ OUTPUT ===============================\n")
-        print("\n\tEmail Object Information:")
+        print("\n\t    Email Object Information:")
 
-        print(f"\t                    Email: {data_container.email}")
-        print(f"\t              MailBoxName: {email_object.md_email_obj.GetMailBoxName()}")
-        print(f"\t               DomainName: {email_object.md_email_obj.GetDomainName()}")
-        print(f"\t           TopLevelDomain: {email_object.md_email_obj.GetTopLevelDomain()}")
-        print(f"\tTopLevelDomainDescription: {email_object.md_email_obj.GetTopLevelDomainDescription()}")
-        print(f"\t             Result Codes: {data_container.result_codes}")
+        print(f"\t                       Email: {data_container.email}")
+        print(f"\t                Mailbox Name: {email_object.md_email_obj.GetMailBoxName()}")
+        print(f"\t                 Domain Name: {email_object.md_email_obj.GetDomainName()}")
+        print(f"\t            Top-Level Domain: {email_object.md_email_obj.GetTopLevelDomain()}")
+        print(f"\tTop-Level Domain Description: {email_object.md_email_obj.GetTopLevelDomainDescription()}")
+        print(f"\t                Result Codes: {data_container.result_codes}")
 
 
 
