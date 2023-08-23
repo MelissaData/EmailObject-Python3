@@ -200,7 +200,7 @@ class mdEmail(object):
 	def GetResults(self):
 		return lib.mdEmailGetResults(self.I).decode('utf-8')
 
-	def GetResultCodeDescription(self, resultCode, opt):
+	def GetResultCodeDescription(self, resultCode, opt=0):
 		return lib.mdEmailGetResultCodeDescription(self.I, resultCode.encode('utf-8'), ResultCdDescOpt(opt).value).decode('utf-8')
 
 	def GetMailBoxName(self):
