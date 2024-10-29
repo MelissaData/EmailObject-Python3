@@ -23,7 +23,7 @@ And return
 
 ## Tested Environments
 - Windows 10 64-bit Python 3.8.7, Powershell 5.1
-- Melissa data files for 2024-09
+- Melissa data files for 2024-10
 
 ## Required File(s) and Programs
 
@@ -77,8 +77,8 @@ The console will then prompt you with the following warning shown in the image b
 
 #### Download this project
 ```
-$ git clone https://github.com/MelissaData/EmailObject-Python3
-$ cd EmailObject-Python3
+git clone https://github.com/MelissaData/EmailObject-Python3
+cd EmailObject-Python3
 ```
 
 #### Set up Melissa Updater 
@@ -111,25 +111,25 @@ Parameters:
 When you have modified the script to match your data location, let's run the script. There are two modes:
 - Interactive 
 
-	The script will prompt the user for an email address, then use the provided email to test Email Object. For example:
-	```
-	$ .\MelissaEmailObjectWindowsPython3.ps1
-	```
+    The script will prompt the user for an email address, then use the provided email to test Email Object. For example:
+    ```
+    .\MelissaEmailObjectWindowsPython3.ps1
+    ```
     For quiet mode:
     ```
-    $ .\MelissaEmailObjectWindowsPython3.ps1 -quiet
+    .\MelissaEmailObjectWindowsPython3.ps1 -quiet
     ```
 - Command Line 
 
-	You can pass an email in ```-email``` parameter and a license string in ```-license``` parameter to test Email Object. For example:
-	```
-    $ .\MelissaEmailObjectWindowsPython3.ps1 -email "info@melissa.com" 
-    $ .\MelissaEmailObjectWindowsPython3.ps1 -email "info@melissa.com" -license "<your_license_string>"
+    You can pass an email in ```-email``` parameter and a license string in ```-license``` parameter to test Email Object. For example:
     ```
-	For quiet mode:
+    .\MelissaEmailObjectWindowsPython3.ps1 -email "info@melissa.com" 
+    .\MelissaEmailObjectWindowsPython3.ps1 -email "info@melissa.com" -license "<your_license_string>"
     ```
-    $ .\MelissaEmailObjectWindowsPython3.ps1 -email "info@melissa.com" -quiet
-    $ .\MelissaEmailObjectWindowsPython3.ps1 -email "info@melissa.com" -license "<your_license_string>" -quiet
+    For quiet mode:
+    ```
+    .\MelissaEmailObjectWindowsPython3.ps1 -email "info@melissa.com" -quiet
+    .\MelissaEmailObjectWindowsPython3.ps1 -email "info@melissa.com" -license "<your_license_string>" -quiet
     ```
 This is the expected output from a successful setup for interactive mode:
 
