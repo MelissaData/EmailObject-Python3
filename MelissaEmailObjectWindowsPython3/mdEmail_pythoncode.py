@@ -135,10 +135,10 @@ class mdEmail(object):
 		lib.mdEmailDestroy(self.I)
 
 	def SetLicenseString(self, License):
-		return lib.mdEmailSetLicenseString(self.I, License.encode('utf-8'))
+		return lib.mdEmailSetLicenseString(self.I, (License or '').encode('utf-8'))
 
 	def SetPathToEmailFiles(self, emailDataFiles):
-		lib.mdEmailSetPathToEmailFiles(self.I, emailDataFiles.encode('utf-8'))
+		lib.mdEmailSetPathToEmailFiles(self.I, (emailDataFiles or '').encode('utf-8'))
 
 	def InitializeDataFiles(self):
 		return ProgramStatus(lib.mdEmailInitializeDataFiles(self.I))
@@ -159,7 +159,7 @@ class mdEmail(object):
 		return lib.mdEmailGetLicenseStringExpirationDate(self.I).decode('utf-8')
 
 	def VerifyEmail(self, email):
-		return lib.mdEmailVerifyEmail(self.I, email.encode('utf-8'))
+		return lib.mdEmailVerifyEmail(self.I, (email or '').encode('utf-8'))
 
 	def SetCorrectSyntax(self, p1):
 		lib.mdEmailSetCorrectSyntax(self.I, p1)
@@ -201,7 +201,7 @@ class mdEmail(object):
 		return lib.mdEmailGetResults(self.I).decode('utf-8')
 
 	def GetResultCodeDescription(self, resultCode, opt=0):
-		return lib.mdEmailGetResultCodeDescription(self.I, resultCode.encode('utf-8'), ResultCdDescOpt(opt).value).decode('utf-8')
+		return lib.mdEmailGetResultCodeDescription(self.I, (resultCode or '').encode('utf-8'), ResultCdDescOpt(opt).value).decode('utf-8')
 
 	def GetMailBoxName(self):
 		return lib.mdEmailGetMailBoxName(self.I).decode('utf-8')
@@ -219,13 +219,13 @@ class mdEmail(object):
 		return lib.mdEmailGetEmailAddress(self.I).decode('utf-8')
 
 	def SetReserved(self, Property, Value_):
-		lib.mdEmailSetReserved(self.I, Property.encode('utf-8'), Value_.encode('utf-8'))
+		lib.mdEmailSetReserved(self.I, (Property or '').encode('utf-8'), (Value_ or '').encode('utf-8'))
 
 	def GetReserved(self, Property_):
-		return lib.mdEmailGetReserved(self.I, Property_.encode('utf-8')).decode('utf-8')
+		return lib.mdEmailGetReserved(self.I, (Property_ or '').encode('utf-8')).decode('utf-8')
 
 	def SetCachePath(self, cachePath):
-		lib.mdEmailSetCachePath(self.I, cachePath.encode('utf-8'))
+		lib.mdEmailSetCachePath(self.I, (cachePath or '').encode('utf-8'))
 
 	def SetCacheUse(self, cacheUse):
 		lib.mdEmailSetCacheUse(self.I, cacheUse)
