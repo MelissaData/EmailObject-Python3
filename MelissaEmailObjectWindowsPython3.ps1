@@ -18,7 +18,7 @@ class FileConfig {
 
 ######################### Config ###########################
 
-$RELEASE_VERSION = '2026.04'
+$RELEASE_VERSION = '2026.05'
 $ProductName = "DQ_EMAIL_DATA"
 
 # Uses the location of the .ps1 file 
