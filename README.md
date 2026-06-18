@@ -23,7 +23,7 @@ And return
 
 ## Tested Environments
 - Windows 11 64-bit Python 3.8.7, Powershell 5.1
-- Melissa data files for 2026-05
+- Melissa data files for 2026-06
 
 ## Required File(s) and Programs
 
