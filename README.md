@@ -77,8 +77,8 @@ The console will then prompt you with the following warning shown in the image b
 
 #### Download this project
 ```
-git clone https://git.melissadata.com/dtgroup/melissadataobjectexamples/python3/melissadataemailobjectwindowspython3sample
-cd MelissaEmailObjectWindowsPython3
+git clone https://github.com/MelissaData/EmailObject-Python3
+cd EmailObject-Python3
 ```
 
 #### Set up Melissa Updater 
